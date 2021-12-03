@@ -1,0 +1,13 @@
+CC=gcc
+CF1=-std=c89
+CF2=-lm
+CF3=-o
+CF4=-pedantic
+compila_pedina:Pedina.c
+	$(CC) Pedina.c $(CF1) $(CF4) $(CF2) $(CF3) Pedina
+compila_player:Player.c
+	$(CC) Player.c $(CF1) $(CF4) $(CF2) $(CF3) Player
+compila_master:Master.c
+	$(CC) Master.c $(CF1) $(CF4) $(CF2) $(CF3) Master
+compila:compila_pedina compila_player compila_master 
+	make compila_pedina compila_player compila_master
